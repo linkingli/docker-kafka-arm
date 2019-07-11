@@ -1,8 +1,6 @@
-FROM arm64v8/openjdk:8
+FROM arm64v8/openjdk:8-jre-slim
 
 MAINTAINER Felix <whutwf@outlook.com>
-
-RUN apt-get update && apt-get install -y ca-certificates wget tar --no-install-recommends
 
 ENV KAFKA_VERSION=2.11 \
     KAFKA_SUBVERSION=2.1.1 \
@@ -10,6 +8,8 @@ ENV KAFKA_VERSION=2.11 \
     TZ=Asia/Shanghai
 
 RUN set -ex \
+    && apt-get update && apt-get install -y ca-certificates wget tar --no-install-recommends \
+    && apt-get clean \
     && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
     && cd ${KAFKA_WORKDIR} \
     && wget http://mirror.bit.edu.cn/apache/kafka/${KAFKA_SUBVERSION}/kafka_${KAFKA_VERSION}-${KAFKA_SUBVERSION}.tgz \
