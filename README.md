@@ -1,5 +1,5 @@
-## ArmV8 Kafka2.1.1 Docker镜像移植
-----
+## ArmV8 Kafka2.1.1 Docker镜像移
+
 ### 测试验证
 > 如需要修改配置，请修改config文件夹对应的文件
 
