@@ -19,6 +19,7 @@ RUN set -ex \
 
 WORKDIR ${KAFKA_WORKDIR}/kafka_${KAFKA_VERSION}-${KAFKA_SUBVERSION}
 
+
 COPY config/server.properties ${KAFKA_WORKDIR}/kafka_${KAFKA_VERSION}-${KAFKA_SUBVERSION}/config/
 COPY config/zookeeper.properties ${KAFKA_WORKDIR}/kafka_${KAFKA_VERSION}-${KAFKA_SUBVERSION}/config/
 COPY entrypoint.sh /
