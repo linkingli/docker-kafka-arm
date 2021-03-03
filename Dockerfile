@@ -1,5 +1,5 @@
 #5 232.7
-FROM arm64v8/openjdk:8-jre-slim
+FROM openjdk:17-jdk-oracle
 
 MAINTAINER Felix <whutwf@outlook.com>
 
