@@ -1,7 +1,9 @@
 #5 232.7
-FROM openjdk:17-jdk-oraclelinux7
+FROM centos:7
 
 MAINTAINER Felix <whutwf@outlook.com>
+
+RUN yum install -y java
 
 ENV KAFKA_VERSION=2.12 \
     KAFKA_SUBVERSION=2.0.0 \
