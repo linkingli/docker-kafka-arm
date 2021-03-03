@@ -1,5 +1,5 @@
 #5 232.7
-FROM openjdk:17-jdk-oracle
+FROM openjdk:17-jdk-oraclelinux7
 
 MAINTAINER Felix <whutwf@outlook.com>
 
