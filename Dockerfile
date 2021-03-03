@@ -1,9 +1,11 @@
 #5 232.7
-FROM centos:7
+FROM ubuntu:20.04
 
 MAINTAINER Felix <whutwf@outlook.com>
 
-RUN yum install -y java
+RUN apt update
+RUN apt install default-jdk
+RUN java -version
 
 ENV KAFKA_VERSION=2.12 \
     KAFKA_SUBVERSION=2.0.0 \
