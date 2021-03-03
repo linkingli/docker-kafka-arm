@@ -4,7 +4,7 @@ FROM ubuntu:20.04
 MAINTAINER Felix <whutwf@outlook.com>
 
 RUN apt update
-RUN apt install default-jdk
+RUN apt install default-jdk -y
 RUN java -version
 
 ENV KAFKA_VERSION=2.12 \
